@@ -1,4 +1,4 @@
-//This is For the Main Menu. Already works fine, DO NOT EDIT.
+//This is For the Main Menu
 //
 //  RoadAnimation.swift
 //
@@ -16,7 +16,7 @@ class RoadAnimation {
     private var backgroundNodes: [SKSpriteNode] = []
     private let numBackgroundNodes = 2
     private let backgroundNodeHeight: CGFloat = 1400
-    private var moveupDuration: TimeInterval = 2
+    private var moveupDuration: TimeInterval = 6
     
     // MARK: - Init
     

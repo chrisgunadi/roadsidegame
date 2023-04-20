@@ -8,15 +8,16 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "roadsidegame",
+    name: "Project Roadside",
     platforms: [
         .iOS("15.2")
     ],
     products: [
         .iOSApplication(
-            name: "roadsidegame",
+            name: "Project Roadside",
             targets: ["AppModule"],
             bundleIdentifier: "chrisg.roadsidegame",
+            teamIdentifier: "Y7B8DUS83L",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .asset("AppIcon"),
@@ -27,14 +28,20 @@ let package = Package(
             ],
             supportedInterfaceOrientations: [
                 .portrait,
+                .landscapeRight,
+                .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
+            ],
+            appCategory: .racingGames
         )
     ],
     targets: [
         .executableTarget(
             name: "AppModule",
-            path: "."
+            path: ".",
+            resources: [
+                .process("Resources")
+            ]
         )
     ]
 )
